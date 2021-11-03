@@ -136,7 +136,6 @@ theta3 = data3.iloc[-1,:].values
 
 """##**C) Scalling the testset features**"""
 
-scal_fact = x_df.max().values
 x = x/scal_fact
 x_test = x  
 y_test = y
@@ -168,8 +167,6 @@ y_pred3=y_pred3.reshape(len(y_pred3),1)
 test1_loss = np.sum(np.square(np.subtract(y_pred1,y_test)))
 test2_loss = np.sum(np.square(np.subtract(y_pred2,y_test)))
 test3_loss = np.sum(np.square(np.subtract(y_pred3,y_test)))
-
-"""##**F) Selecting the best model for the dataset**"""
 
 print(f"linear regression model:                  loss = {test1_loss}")
 print(f"2nd-degree non-linear regression model:   loss = {test2_loss}")
